@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "react-native-text-verification",
+    "slug": "react-native-text-verification",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "react-native-text-verification"
+}
