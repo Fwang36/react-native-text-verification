@@ -11,6 +11,8 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 
+import { generateRandomString } from './helpers';
+
 export default function App() {
 
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -31,7 +33,9 @@ export default function App() {
         </Text>
 
         <Form 
-          // onButtonPress={changeSelect}
+          onButtonPress={() => {
+            console.log(generateRandomString())
+          }}
           buttonStyle={styles.submitBtn}
           buttonText="Verify"  
         >
