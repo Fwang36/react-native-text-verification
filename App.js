@@ -16,6 +16,7 @@ import { generateRandomString } from './helpers';
 export default function App() {
 
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [verify, setVerify] = useState(false)
 
   const CELL_COUNT = 4;
   const [value, setValue] = useState('');
@@ -35,10 +36,14 @@ export default function App() {
         <Form 
           onButtonPress={() => {
             console.log(generateRandomString())
+            setVerify(true)
           }}
           buttonStyle={styles.submitBtn}
-          buttonText="Verify"  
+          buttonText={verify ? "Verify" : "Send Code"}
         >
+
+
+
           <View style={styles.labelContainer}>
             <Text style={styles.label}>
               Phone number
